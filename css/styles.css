@@ -201,11 +201,28 @@ textarea {
 }
 .footer {
   background-color: var(--navy-blue);
-  padding: 100px 0;
+  padding: 96px 0;
+}
+@media only screen and (max-width: 767px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
 }
 .footer .container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .footer .container {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 .logo-footer {
   color: var(--cloud);
@@ -215,14 +232,36 @@ textarea {
   margin-bottom: 16px;
 }
 .footer-text-logo {
-  margin-right: 120px;
+  margin-bottom: 72px;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .footer-text-logo {
+    margin-right: 24px;
+    margin-bottom: 0;
+    text-align: start;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer-text-logo {
+    margin-right: 120px;
+  }
 }
 .footer-text {
   color: var(--cloud);
-  max-width: 264px;
+  width: 268px;
+  text-align: start;
+}
+@media only screen and (min-width: 768px) {
+  .footer-text {
+    width: 264px;
+  }
 }
 .footer-text-icons {
-  margin-right: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .footer-text-icon {
   font-weight: 500;
@@ -231,7 +270,8 @@ textarea {
 }
 .footer-icons-list {
   display: flex;
-  gap: 24px;
+  gap: 16px;
+  margin-bottom: 72px;
 }
 .footer-icons-item {
   width: 40px;
@@ -247,24 +287,53 @@ textarea {
   width: 100%;
   height: 100%;
 }
-.footer-social-icons-link:hover,
-.footer-social-icons-link:focus {
-  background-color: var(--green);
-  transition: var(--trst, ease);
-  transition-property: background-color;
+@media only screen and (min-width: 768px) {
+  .footer-text-icons {
+    margin-right: 80px;
+    align-items: flex-start;
+  }
+  .footer-icons-list {
+    gap: 24px;
+    margin-bottom: 0;
+  }
+  .footer-social-icons-link:hover,
+  .footer-social-icons-link:focus {
+    background-color: var(--green);
+    transition: var(--trst, ease);
+    transition-property: background-color;
+  }
 }
 .footer-subscribe {
   display: flex;
-  justify-content: space-between;
-  width: 453px;
-  height: 80px;
-  align-items: flex-end;
+  flex-direction: column;
+  width: calc(100% - 16px);
+  height: 40px;
+  align-items: center;
+  gap: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-subscribe {
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 453px;
+    height: 80px;
+    flex-direction: row;
+  }
 }
 .footer-subscribe-text-input {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
-  margin-right: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-subscribe-text-input {
+    align-items: flex-start;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer-subscribe-text-input {
+    margin-right: 24px;
+  }
 }
 .footer-subscribe-label {
   font-weight: 500;
