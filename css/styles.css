@@ -802,6 +802,9 @@ textarea {
   background-color: var(--iris);
   border: 1px solid var(--iris);
 }
+.modal-btn.js-close-menu {
+  background-color: transparent;
+}
 .modal-review-block {
   padding-top: 72px;
   padding-bottom: 24px;
