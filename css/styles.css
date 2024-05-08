@@ -120,8 +120,15 @@ textarea {
 .logo-header {
   color: var(--navy-blue);
 }
-.header .logo {
-  margin-right: 76px;
+@media only screen and (min-width: 758px) {
+  .header .logo {
+    margin-right: 120px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .header .logo {
+    margin-right: 76px;
+  }
 }
 .header-nav {
   margin-right: auto;
@@ -152,6 +159,11 @@ textarea {
   bottom: 1px;
   left: 0;
 }
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .header-list-link::after {
+    bottom: -12px;
+  }
+}
 .header-list-link.current {
   color: var(--ocean);
 }
@@ -181,9 +193,11 @@ textarea {
     display: none;
   }
 }
-.menu-toggle {
-  stroke-width: 3px;
-  stroke: var(--navy-blue);
+@media only screen and (max-width: 1158px) {
+  .header-address-list {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 .footer {
   background-color: var(--navy-blue);
@@ -796,8 +810,8 @@ textarea {
   border-radius: 50%;
   border: 1px solid var(--light-slate);
 }
-.modal-btn:hover,
-.modal-btn:focus {
+.modal-btn.modal-backdrop:hover,
+.modal-btn.modal-backdrop:focus {
   fill: var(--white);
   background-color: var(--iris);
   border: 1px solid var(--iris);
@@ -930,15 +944,13 @@ input[type='checkbox']:checked
   border-radius: 50%;
   outline: none;
   color: var(--navy-blue);
+  stroke-width: 3px;
+  stroke: var(--navy-blue);
 }
 @media (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
-}
-.menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
 }
 .menu-container {
   position: fixed;
@@ -963,7 +975,7 @@ input[type='checkbox']:checked
 }
 .mobile-menu {
   padding: 0;
-  margin: 0;
+  margin-top: 24px;
   list-style: none;
 }
 .mobile-menu .link {
@@ -974,4 +986,42 @@ input[type='checkbox']:checked
   font-weight: 700;
   font-size: 36px;
   text-transform: capitalize;
+}
+.link.current-page {
+  color: var(--ocean);
+}
+.mobile-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+.mobile-menu-item:last-child {
+  margin-bottom: 168px;
+}
+.mobile-contacts {
+  margin-bottom: 40px;
+}
+.mobile-contacts li:not(:last-child) {
+  margin-bottom: 40px;
+}
+.mobile-contacts .link {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+  letter-spacing: 0.4px;
+}
+@media only screen and (min-width: 428px) {
+  .mobile-contacts .link.accent {
+    font-size: 36px;
+    line-height: 40px;
+    color: rgb(var(--accent-cl));
+  }
+}
+@media only screen and (max-width: 427px) {
+  .mobile-socials {
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 428px) {
+  .mobile-socials {
+    gap: 56px;
+  }
 }
