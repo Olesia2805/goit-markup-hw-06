@@ -308,7 +308,6 @@ textarea {
   display: flex;
   flex-direction: column;
   width: calc(100% - 16px);
-  height: 40px;
   align-items: center;
   gap: 16px;
 }
@@ -949,6 +948,8 @@ textarea {
   font-size: 12px;
   letter-spacing: 0.04em;
   color: var(--light-slate);
+  display: flex;
+  align-items: center;
 }
 .review-form-checkbox {
   display: inline-flex;
@@ -961,6 +962,7 @@ textarea {
   border: 1px solid var(--navy-blue-modal);
   cursor: pointer;
   transition: var(--trns);
+  flex-shrink: 0;
 }
 input[type='checkbox']:checked
   + .review-form-agreement-desc
