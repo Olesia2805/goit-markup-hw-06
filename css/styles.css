@@ -75,8 +75,6 @@ img {
 }
 
 .container {
-  /* max-width: 428px; */
-  /* min-width: 396px; */
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -358,6 +356,7 @@ textarea {
 }
 .footer-subscribe-string::placeholder {
   color: var(--white);
+  letter-spacing: 0.04em;
 }
 .footer-subscribe-btn {
   display: inline-flex;
@@ -373,6 +372,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  letter-spacing: 0.04em;
 }
 .footer-subscribe-btn:hover,
 .footer-subscribe-btn:focus {
@@ -901,6 +901,7 @@ textarea {
 .review-form-label {
   font-size: 12px;
   color: var(--light-slate);
+  letter-spacing: 0.04em;
 }
 .review-form-field {
   position: relative;
@@ -939,6 +940,7 @@ textarea {
 }
 .review-form-message::placeholder {
   color: var(--navy-blue-modal);
+  letter-spacing: 0.04em;
 }
 .review-form-agreement {
   margin-top: 16px;
