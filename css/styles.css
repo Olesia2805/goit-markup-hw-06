@@ -100,6 +100,7 @@ textarea {
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
   background: var(--white);
+  padding: 23px 0;
 }
 
 .header .container {
@@ -128,39 +129,39 @@ textarea {
     margin-right: 76px;
   }
 }
-.header-nav {
-  margin-right: auto;
-}
-.header-list {
-  display: flex;
-  gap: 40px;
-}
-.header-list-link {
-  font-weight: 500;
-  position: relative;
-  padding: 28px 0;
-  display: block;
-}
-.header-list-link:hover,
-.header-list-link:focus {
-  color: var(--ocean);
-  transition: var(--trst, ease);
-  transition-property: color;
-}
-.header-list-link::after {
-  content: '';
-  display: block;
-  border-radius: 2px;
-  width: 100%;
-  height: 4px;
-  background-color: transparent;
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-}
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .header {
+    padding: 0;
+  }
+  .header-nav {
+    margin-right: auto;
+  }
+  .header-list {
+    display: flex;
+    gap: 40px;
+  }
+  .header-list-link {
+    font-weight: 500;
+    position: relative;
+    padding: 28px 0;
+    display: block;
+  }
+  .header-list-link:hover,
+  .header-list-link:focus {
+    color: var(--ocean);
+    transition: var(--trst, ease);
+    transition-property: color;
+  }
   .header-list-link::after {
+    content: '';
+    display: block;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    position: absolute;
     bottom: -1px;
+    left: 0;
   }
 }
 .header-list-link.current {
@@ -312,7 +313,6 @@ textarea {
   flex-direction: column;
   width: calc(100% - 16px);
   align-items: center;
-  gap: 16px;
 }
 @media only screen and (min-width: 768px) {
   .footer-subscribe {
@@ -1056,6 +1056,8 @@ input[type='checkbox']:checked
   z-index: 999;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 .menu-container.is-open {
   transform: translateX(0);
@@ -1064,7 +1066,7 @@ input[type='checkbox']:checked
   position: absolute;
   top: 16px;
   right: 16px;
-  color: #fff;
+  color: var(--white);
 }
 .mobile-menu {
   padding: 0;
@@ -1088,9 +1090,6 @@ input[type='checkbox']:checked
 }
 .mobile-menu-item:not(:last-child) {
   margin-bottom: 40px;
-}
-.mobile-menu-item:last-child {
-  margin-bottom: 168px;
 }
 .mobile-contacts-item {
   margin-bottom: 24px;
