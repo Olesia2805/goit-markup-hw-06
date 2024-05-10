@@ -97,11 +97,11 @@ textarea {
 /* header and footer */
 .header {
   border-bottom: 1px solid var(--cornflower);
-  padding: 24px 0;
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
   background: var(--white);
 }
+
 .header .container {
   display: flex;
   align-items: center;
@@ -139,6 +139,7 @@ textarea {
   font-weight: 500;
   position: relative;
   padding: 28px 0;
+  display: block;
 }
 .header-list-link:hover,
 .header-list-link:focus {
@@ -154,12 +155,12 @@ textarea {
   height: 4px;
   background-color: transparent;
   position: absolute;
-  bottom: 1px;
+  bottom: -1px;
   left: 0;
 }
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
   .header-list-link::after {
-    bottom: -12px;
+    bottom: -1px;
   }
 }
 .header-list-link.current {
@@ -216,7 +217,7 @@ textarea {
     flex-direction: row;
     align-items: baseline;
     flex-wrap: wrap;
-    margin-left: 108px;
+    width: 584px;
   }
 }
 @media only screen and (min-width: 1157px) {
@@ -289,7 +290,6 @@ textarea {
 }
 @media only screen and (min-width: 768px) {
   .footer-text-icons {
-    margin-right: 80px;
     align-items: flex-start;
   }
   .footer-icons-list {
@@ -300,6 +300,11 @@ textarea {
     background-color: var(--green);
     transition: var(--trst, ease);
     transition-property: background-color;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer-text-icons {
+    margin-right: 80px;
   }
 }
 .footer-subscribe {
